@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>EduGenie - Learning Assistant</title>
+
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <header class="header">
+            <h1>🎓 EduGenie</h1>
+            <p>Google Gemini Powered Learning Assistant</p>
+        </header>
+
+        <main>
+
+            <section class="card">
+
+                <h2>What do you want to learn?</h2>
+
+                <form id="edugenie-form">
+
+                    <label for="task">Choose a task</label>
+
+                    <select id="task">
+                        <option value="qa">
+                            Question & Answer
+                        </option>
+
+                        <option value="explain">
+                            Explain a Topic
+                        </option>
+
+                        <option value="quiz">
+                            Generate Quiz
+                        </option>
+
+                        <option value="summarize">
+                            Summarize Text
+                        </option>
+
+                        <option value="learn">
+                            Create Learning Path
+                        </option>
+                    </select>
+
+
+                    <label for="user-input">
+                        Enter your question or topic
+                    </label>
+
+                    <textarea
+                        id="user-input"
+                        rows="8"
+                        placeholder="Enter your question here..."
+                    ></textarea>
+
+
+                    <div id="level-container" class="hidden">
+
+                        <label for="level">
+                            Learning Level
+                        </label>
+
+                        <select id="level">
+
+                            <option value="beginner">
+                                Beginner
+                            </option>
+
+                            <option value="intermediate">
+                                Intermediate
+                            </option>
+
+                            <option value="advanced">
+                                Advanced
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <button
+                        type="submit"
+                        id="submit-button"
+                    >
+
+                        <span id="button-text">
+                            Get Answer
+                        </span>
+
+                        <span
+                            id="loading-spinner"
+                            class="spinner hidden"
+                        >
+                            ⏳
+                        </span>
+
+                    </button>
+
+                </form>
+
+            </section>
+
+
+            <section
+                id="result-section"
+                class="card hidden"
+            >
+
+                <div class="result-header">
+
+                    <h2>Result</h2>
+
+                    <button
+                        type="button"
+                        id="copy-button"
+                    >
+                        Copy
+                    </button>
+
+                </div>
+
+                <div id="result"></div>
+
+            </section>
+
+        </main>
+
+
+        <footer class="footer">
+
+            <p>
+                EduGenie © 2026
+            </p>
+
+        </footer>
+
+    </div>
+
+
+    <script src="/static/app.js"></script>
+
+</body>
+</html>
